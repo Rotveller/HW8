@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Task1");
@@ -5,54 +7,58 @@ public class Main {
         numbers[0] = 1;
         numbers[1] = 2;
         numbers[2] = 3;
-        float[] numberTwo = {1.57f, 7.654f, 9.986f};
-        int[] plans = {1, 2, 3, 4, 5, 6, 7, 8};
+        double numberTwo[] = {1.57, 7.654, 9.986};
+        boolean[] plans = {true, false};
         System.out.println("Task2");
-        for (int i = 0; i < 3; i++) {
-            if (i == 2) {
-                System.out.printf("%s.", numbers[i]);
-            } else {
-                System.out.printf("%s,", numbers[i]);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i]);
+            if (i != numbers.length - 1) {
+                System.out.print(", ");
             }
         }
         System.out.println();
-        for (int t = 0; t < numberTwo.length; t++) {
-            if (t == numberTwo.length - 1) {
-                System.out.printf("%s.", numberTwo[t]);
-            } else {
-                System.out.printf("%s,", numberTwo[t]);
+        for (int i = 0; i < numberTwo.length; i++) {
+            System.out.print(numberTwo[i]);
+            if (i != numberTwo.length - 1) {
+                System.out.print(", ");
             }
         }
         System.out.println();
-        for (int j = 0; j < plans.length; j++) {
-            if (j == plans.length - 1) {
-                System.out.printf("%s.", plans[j]);
-            } else {
-                System.out.printf("%s,", plans[j]);
+        for (int i = 0; i < plans.length; i++) {
+            System.out.print(plans[i]);
+            if (i != plans.length - 1) {
+                System.out.print(", ");
             }
         }
         System.out.println();
         System.out.println("Task3");
-        for (int i = 0; i < 0; i--) {
-            if (i == i - 1) {
-                System.out.printf("%s.", numbers[i]);
-            } else {
-                System.out.printf("%s,", numbers[i]);
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.print(numbers[i]);
+            if (i != 0) {
+                System.out.print(", ");
             }
         }
-        for (int t = 0; t > numberTwo.length - 1; t--) {
-            if (t == numberTwo.length - 1) {
-                System.out.printf("%s.", numberTwo[t]);
-            } else {
-                System.out.printf("%s,", numberTwo[t]);
+        System.out.println();
+        for (int i = numberTwo.length - 1; i >= 0; i--) {
+            System.out.print(numberTwo[i]);
+            if (i != 0) {
+                System.out.print(", ");
             }
         }
-        for (int j = 0; j > plans.length; j--) {
-            if (j == plans.length - 1) {
-                System.out.printf("%s.", plans[j]);
-            } else {
-                System.out.printf("%s,", plans[j]);
+        System.out.println();
+        for (int i = plans.length - 1; i >= 0; i--) {
+            System.out.print(plans[i]);
+            if (i != 0) {
+                System.out.print(", ");
             }
         }
+        System.out.println();
+        System.out.println("Task4");
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 1) {
+                numbers[i]++;
+            }
+        }
+        System.out.println(Arrays.toString(numbers));
     }
 }
